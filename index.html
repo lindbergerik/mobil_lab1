@@ -1,1 +1,49 @@
-Hello World
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MAP APP</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta name="mobile-web-app-capable" content="yes">
+    <!-- <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css"> tog bort pga 'insecure' -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/index.css">
+    <link rel="manifest" href="/manifest.json">
+  </head>
+  <body>
+    <div id="map"></div>
+    <!-- <div id="map" draggable="true" ontouchstart="startPan(event)" ontouchend="stopPan(event)"></div> -->
+    <div class="row">
+        <div class="col-xs-12">
+            <button id="minusButton" onclick="zoomOut()"><span class="fa fa-minus"></span></button>
+            <button id="upButton" onclick="panUp()"><span class="fa fa-angle-up"></span></button>
+            <button id="plusButton" onclick="zoomIn()"><span class="fa fa-plus"></span></button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <button id="leftButton" onclick="panLeft()"><span class="fa fa-angle-left"></span></button>
+            <button id="downButton" onclick="panDown()"><span class="fa fa-angle-down"></span></button>
+            <button id="rightButton" onclick="panRight()"><span class="fa fa-angle-right"></span></button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <button id="here" onclick="geoLocation()"><span>HEM</span></button>
+            <button id="there1" onclick="goErik()"><span>ERIK</span></button>
+            <button id="there2" onclick="goSebbe()"><span>SEBBE</span></button>
+        </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <!-- Bootstrap JavaScript, needed if you want for instance tabs, models, popovers etc. -->
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script> -->
+    <!-- Google Maps -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBgN6iyRx0fheO1BS9OXRv8DnfLkpq3_4k&callback=initMap"
+    async defer></script>
+    <!-- Eget -->
+    <script src="map.js"></script>
+    <script src="interaction.js"></script>
+  </body>
+</html>
